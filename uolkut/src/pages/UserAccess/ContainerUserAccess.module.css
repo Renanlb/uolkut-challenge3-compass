@@ -1,0 +1,35 @@
+/* Style of main page */
+
+.main {
+    display: flex;
+    background: #D9E6F7;
+    max-width: 100%;
+    height: 1040px;
+}
+
+.main img {
+    width: 800px;
+    height: 598px;
+    flex-shrink: 0; 
+    margin-top: 150px;
+    margin-left: 22rem; 
+    z-index: 1;
+}
+
+.bg_image {
+    position: absolute;
+    z-index: 1;
+}
+
+.main p {
+    position: absolute;
+    color: #FFF;
+    font-family: SF Pro Display;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    z-index: 1;
+    margin-top: 640px;
+    margin-left: 25rem;
+}
