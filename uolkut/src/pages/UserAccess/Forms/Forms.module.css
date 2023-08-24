@@ -166,6 +166,7 @@ button:hover {
   margin-top: -8px;
   margin-bottom: 20px;
   margin-left: 10rem;
+  cursor: pointer;
 }
 
 /*---------------------------------- ForgotPasswordForm Style ---------------------------------- */
@@ -181,7 +182,7 @@ button:hover {
   cursor: pointer;
 }
 
-/*---------------------------------- ForgotPasswordForm Style ---------------------------------- */
+/*---------------------------------- ChangePasswordForm Style ---------------------------------- */
 
 .form a {
   color: #ED6D25;

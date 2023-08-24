@@ -1,0 +1,15 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    flex-shrink: 0;
+    background: #FDFEFF;
+}
+
+.footer p {
+    color: #ED6D25;
+    font-family: Roboto Flex;
+    font-size: 18px;
+    margin-top: 15px;
+}

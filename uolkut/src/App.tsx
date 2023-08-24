@@ -6,6 +6,7 @@ import RegisterForm from './pages/UserAccess/Forms/RegisterForm'
 import {  BrowserRouter, Route, Routes } from "react-router-dom"
 import ForgotPasswordForm from './pages/UserAccess/Forms/ForgotPasswordForm'
 import ChangePasswordForm from './pages/UserAccess/Forms/ChangePasswordForm'
+import Footer from './pages/UserAccess/Footer'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/change-password" element={<ChangePasswordForm/>}/>
         </Routes>
       </BrowserRouter>
+      <Footer/>
     </>
   )
 }
