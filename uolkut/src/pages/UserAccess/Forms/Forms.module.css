@@ -1,0 +1,195 @@
+/* General style */
+
+.form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 241px;
+  left: 1184px;
+  width: 384px;
+  height: 598px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #FDFEFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.form .imglogo {
+  margin-top: 48px;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.form h2 {
+  color: #ED6D25;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 18px;
+  margin-bottom: 38px;
+}
+
+.form input {
+  border: none;
+  width: 336px;
+  height: 51px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #EFF3F8;
+  margin-bottom: 24px;
+  padding-left: 15px;
+  color: #868686;
+  font-size: 16px;
+}
+
+.form input::placeholder {
+  color: #868686;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+button {
+  width: 336px;
+  height: 51px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #FFF;
+  background: #ED6D25;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 2px solid #ED6D25;
+  background: #EFF3F8;
+  color: #ED6D25;
+}
+
+.button_secondary {
+  background: #EFF3F8;
+  color: #ED6D25;
+
+}
+
+/*---------------------------------- LoginForm Style ---------------------------------- */
+
+.check_box {
+  display: flex;
+  justify-content: center;
+  margin-right: 150px;
+  margin-bottom: 40px;
+}
+
+.check_box img {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.check_box span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0px;
+  color: #868686;
+  margin-left: 10px;
+}
+
+.forgot_password {
+  color: #ED6D25;
+  text-decoration: none;
+  text-decoration-line: underline;
+  margin-top: 10px;
+}
+
+/*---------------------------------- RegisterForm Style ---------------------------------- */
+
+.imglogoRegister {
+  margin-top: 16px;
+}
+
+.name_input {
+  margin-top: -25px;
+}
+
+.birthdate_occupation,
+.country_city {
+  display: flex;
+  gap: 6px;
+}
+
+.birthdate_occupation .birthdate_input {
+  width: 125px;
+  height: 51px;
+  flex-shrink: 0;
+}
+
+.birthdate_occupation .occupation_input {
+  width: 184px;
+  height: 51px;
+  flex-shrink: 0;
+}
+
+.country_city .country_input {
+  width: 125px;
+  height: 51px;
+  flex-shrink: 0;
+}
+
+.country_city .city_input {
+  width: 184px;
+  height: 51px;
+  flex-shrink: 0;
+}
+
+.form select {
+  width: 200px;
+  height: 40px;
+  flex-shrink: 0;
+  padding-left: 10px;
+  color: #868686;
+  background-color: #EFF3F8;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: -8px;
+  margin-bottom: 20px;
+  margin-left: 10rem;
+}
+
+/*---------------------------------- ForgotPasswordForm Style ---------------------------------- */
+
+.remember_password {
+  color: #ED6D25;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 109px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+/*---------------------------------- ForgotPasswordForm Style ---------------------------------- */
+
+.form a {
+  color: #ED6D25;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 1rem;
+  margin-bottom: 15px;
+  cursor: pointer;
+}

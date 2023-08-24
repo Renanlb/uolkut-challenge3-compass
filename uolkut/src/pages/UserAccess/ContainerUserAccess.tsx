@@ -1,5 +1,5 @@
 //images
-import login_image from '../../assets/login-image.svg'
+import wallpaper from '../../assets/wallpaper.svg'
 import bg from '../../assets/bg.svg'
 
 //CSS
@@ -9,7 +9,7 @@ const ContainerUserAccess = () => {
 
   return (
     <main className={styles.main}>
-        <img src={login_image} alt="Orkut" />
+        <img src={wallpaper} alt="Orkut" />
         <div className={styles.bg_image}>
           <img src={bg} alt="Background" />
         </div>
