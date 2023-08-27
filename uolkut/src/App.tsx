@@ -1,7 +1,7 @@
 import './App.css'
 
 // React Routes imports
-import {  BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 // Pages
 import ContainerUserAccess from './pages/UserAccess/ContainerUserAccess'
@@ -17,17 +17,17 @@ function App() {
 
   return (
     <>
-      <HeaderUserAccess/>
-      <ContainerUserAccess/>
       <BrowserRouter>
+        <HeaderUserAccess />
+        <ContainerUserAccess />
         <Routes>
-          <Route path="/" element={<LoginForm/>}/>
-          <Route path="/register" element={<RegisterForm/>}/>
-          <Route path="/forgot-password" element={<ForgotPasswordForm/>}/>
-          <Route path="/change-password" element={<ChangePasswordForm/>}/>
+          <Route path="/" element={<LoginForm />} />
+          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/forgot-password" element={<ForgotPasswordForm />} />
+          <Route path="/change-password" element={<ChangePasswordForm />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer/>
     </>
   )
 }

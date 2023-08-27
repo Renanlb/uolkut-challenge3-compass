@@ -1,8 +1,8 @@
 // import initializeApp  from "firebase/app";
-// import { getFirestore } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 // import firebase from "firebase/compat/app"
 // import "firebase/auth";
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth } from 'firebase/auth';
 import { initializeApp } from 'firebase/app';
 
 
@@ -22,6 +22,6 @@ const auth = getAuth(app);
 
 export {auth};
 
-// const db = getFirestore(app);
+const db = getFirestore(app);
 
-// export {db};
+export {db};

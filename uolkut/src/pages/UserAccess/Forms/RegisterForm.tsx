@@ -1,11 +1,16 @@
 import { FormEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { collection, addDoc } from 'firebase/firestore';
+import { auth, db } from '../../../firebase/config'
+
+// import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
 
 import imgForm from '../../../assets/img_form.svg'
 import style from './Forms.module.css'
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 
-const RegisterForm:React.FC = () => {
+const RegisterForm: React.FC = () => {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -17,29 +22,70 @@ const RegisterForm:React.FC = () => {
     const [relationship, setRelationship] = useState("");
     const [error, setError] = useState<string | null>(null);
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const storeUserDataInFirestore = async (userId, userData) => {
+
+        const userCollection = collection(db, 'users');
+        try {
+            await addDoc(userCollection, { userId, ...userData })
+            console.log('Dados do usuário adicionados ao Firestore');
+        } catch (error) {
+            console.error('Erro ao adicionar dados do usuário ao Firestore', error)
+        }
+    }
+
+
+
+    // const auth = getAuth();
+    // createUserWithEmailAndPassword(auth, email, password)
+    //     .then((userCredential) => {
+    //         const user = userCredential.user;
+    //     })
+    //     .catch((error) => {
+    //         const { code, message } = error;
+    //         setError(`Erro (${code}): ${message}`)
+    //     })
+
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         setError("");
 
-        const user = {
-            name,
-            email,
-            password,
-            birthdate,
-            occupation,
-            country,
-            city,
-            relationship,
-            error
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+
+            await storeUserDataInFirestore(user.uid, {
+                name,
+                email,
+                password,
+                birthdate,
+                occupation,
+                country,
+                city,
+                relationship,
+                error
+            })
+            navigate("/");
+
+        } catch (error) {
+            setError('Erro ao criar a conta. Tente novamente');
         }
 
-        if (name.length < 2) {
-            setError("O campo nome precisa ter pelo menos 2 caracteres")
-        }
-        console.log(user)
+        // const user = {
+        //     name,
+        //     email,
+        //     password,
+        //     birthdate,
+        //     occupation,
+        //     country,
+        //     city,
+        //     relationship,
+        //     error
+        // }
 
-        navigate("/");
+        // if (name.length < 2) {
+        //     setError("O campo nome precisa ter pelo menos 2 caracteres")
+        // }
     }
 
     const [inputType, setInputType] = useState<'text' | 'date'>('text')
