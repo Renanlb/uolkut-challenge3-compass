@@ -1,0 +1,47 @@
+.sideProfile_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    gap: 20px;
+    width: 280px;
+    height: 325px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #FDFEFF;
+    margin-right: 1000px;
+    margin-top: -530px;
+}
+
+.sideProfile_container .userImgNav {
+    position: relative;
+    z-index: 1;
+    width: 170px;
+    height: 170px;
+    flex-shrink: 0;
+    margin-top: 20px;
+}
+
+.Borda {
+    width: 184px;
+    height: 184px;
+    flex-shrink: 0;
+    z-index: 1;
+    margin-top: -197px;
+}
+
+.sideProfile_container h1 {
+    color: #4B4B4B;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.sideProfile_container span {
+    color: #4B4B4B;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
