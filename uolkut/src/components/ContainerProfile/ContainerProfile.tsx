@@ -5,12 +5,16 @@ import UserInfos from '../../components/UserInfos/Userinfos';
 import UserTags from '../UserTags/UserTags';
 import FriendsContainer from '../FriendsContainer/FriendsContainer';
 import CommunityContainer from '../CommunityContainer/CommunityContainer';
+import SideProfileContainer from '../SideProfileContainer/SideProfileContainer';
+import EditButton from '../EditButton/EditButton';
 
 
 
 const ContainerProfile: React.FC = () => {
     return (
         <main className={styles.main}>
+            <SideProfileContainer/>
+            <EditButton/>
             <div className={styles.center_content}>
                 <h2>Boa tarde, Gabriel Brabosa</h2>
                 <div className={styles.balloon_container}>

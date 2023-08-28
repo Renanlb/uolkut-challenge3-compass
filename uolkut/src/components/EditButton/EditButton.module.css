@@ -1,0 +1,16 @@
+.button {
+    position: absolute;
+    color: #ED6D25;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin-left: -345px;
+    margin-top: -50px;
+
+    width: 280px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #FDFEFF;
+}
