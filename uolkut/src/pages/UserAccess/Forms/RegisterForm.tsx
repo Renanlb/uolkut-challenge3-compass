@@ -33,18 +33,6 @@ const RegisterForm: React.FC = () => {
         }
     }
 
-
-
-    // const auth = getAuth();
-    // createUserWithEmailAndPassword(auth, email, password)
-    //     .then((userCredential) => {
-    //         const user = userCredential.user;
-    //     })
-    //     .catch((error) => {
-    //         const { code, message } = error;
-    //         setError(`Erro (${code}): ${message}`)
-    //     })
-
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -70,22 +58,6 @@ const RegisterForm: React.FC = () => {
         } catch (error) {
             setError('Erro ao criar a conta. Tente novamente');
         }
-
-        // const user = {
-        //     name,
-        //     email,
-        //     password,
-        //     birthdate,
-        //     occupation,
-        //     country,
-        //     city,
-        //     relationship,
-        //     error
-        // }
-
-        // if (name.length < 2) {
-        //     setError("O campo nome precisa ter pelo menos 2 caracteres")
-        // }
     }
 
     const [inputType, setInputType] = useState<'text' | 'date'>('text')

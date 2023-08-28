@@ -1,0 +1,47 @@
+.interactions_container {
+    display: flex;
+    margin-left: 24px;
+    margin-top: 40px;
+    gap: 50px;
+
+    color: #4B4B4B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.interactions_container img{
+    margin-right: 6px;
+}
+
+.interactions_container div img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.fan_sub_container {
+    display: flex;
+    gap: 5px;
+
+    color: #4B4B4B;
+    font-family: Roboto Flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.fan_sub_container span {
+    opacity: 0.5;
+}
+
+.fan_container,
+.confiability_container,
+.cool_container,
+.sexy_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+

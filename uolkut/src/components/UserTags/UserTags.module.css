@@ -1,0 +1,46 @@
+.usertags_container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 244px;
+    margin-left: 24px;
+    gap: 32px;
+}
+
+.usertags_container div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.usertags_container p {
+    color: #B4AEAE;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.usertags_container ul li {
+    list-style-type: none;
+    color: #4B4B4B;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-right: 14px;
+
+    display: inline-flex;
+    padding: 2px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid #ED6D25;
+}
+
+.usertags_seeall {
+    color: #ED6D25;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}

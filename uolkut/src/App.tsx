@@ -11,24 +11,35 @@ import RegisterForm from './pages/UserAccess/Forms/RegisterForm'
 import ForgotPasswordForm from './pages/UserAccess/Forms/ForgotPasswordForm'
 import ChangePasswordForm from './pages/UserAccess/Forms/ChangePasswordForm'
 import Footer from './pages/UserAccess/Footer'
+import Profile from './pages/Profile/Profile'
+
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from './firebase/config';
+// import { AuthProvider } from './hooks/useAuth'; 
+
 
 
 function App() {
 
+  const [user] = useAuthState(auth);
+
   return (
-    <>
       <BrowserRouter>
-        <HeaderUserAccess />
-        <ContainerUserAccess />
+        {!user && (
+          <>
+            <HeaderUserAccess />
+            <ContainerUserAccess />
+            <Footer />
+          </>
+        )}
         <Routes>
-          <Route path="/" element={<LoginForm />} />
+          <Route path="/" element={user ? <Profile /> : <LoginForm />} />
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/forgot-password" element={<ForgotPasswordForm />} />
           <Route path="/change-password" element={<ChangePasswordForm />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
-    </>
   )
 }
 
