@@ -1,0 +1,46 @@
+.community_container {
+    position: absolute;
+    width: 280px;
+    height: 411px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #FDFEFF;
+    margin-left: 1000px;
+    margin-top: 430px;
+}
+
+.community_container_header {
+    display: flex;
+    margin-top: 24px;
+    margin-left: 24px;
+    margin-bottom: 10px;
+    gap: 55px;
+}
+
+.community_container_header h1 {
+    color: #4B4B4B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.community_container_header span {
+    color: #ED6D25;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.community_container_images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.community_container_images img {
+    width: 80px;
+    height: 80px;
+    margin-top: 25px;
+}
